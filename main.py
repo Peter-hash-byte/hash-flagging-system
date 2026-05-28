@@ -4,7 +4,9 @@
 import argparse
 import sys
 import logging
-from hash_flagging_system import HashFlagger, FileLoader, ReportGenerator
+from core import HashFlagger
+from loaders import FileLoader
+from reporters import ReportGenerator
 
 logging.basicConfig(
     level=logging.INFO,
