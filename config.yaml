@@ -1,0 +1,4 @@
+hash_algorithm: 'sha256'
+case_sensitive: false
+flag_threshold: 2  # Flag if hash appears 2 or more times
+export_format: 'html'
