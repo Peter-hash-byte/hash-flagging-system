@@ -1,4 +1,37 @@
-hash_algorithm: 'sha256'
+# Hash Flagging System Configuration
+
+# Hash comparison settings
 case_sensitive: false
+hash_algorithm: 'sha256'
+
+# Duplicate detection settings
 flag_threshold: 2  # Flag if hash appears 2 or more times
-export_format: 'html'
+
+# Risk levels (number of employees sharing the same hash)
+risk_levels:
+  critical: 5  # 5 or more
+  high: 3      # 3 or more
+  medium: 2    # 2 or more
+  low: 1       # 1
+
+# Report settings
+report:
+  format: 'html'  # html, json, csv, txt
+  include_timestamp: true
+  include_summary: true
+
+# File upload settings (if using web interface)
+upload:
+  max_file_size: 52428800  # 50MB in bytes
+  allowed_formats:
+    - csv
+    - json
+    - xml
+    - xlsx
+    - xls
+    - tsv
+
+# Logging settings
+logging:
+  level: 'INFO'  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: '%(asctime)s - %(levelname)s - %(message)s'
