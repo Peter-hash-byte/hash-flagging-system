@@ -50,3 +50,40 @@ python main.py --file employees.csv --format csv --threshold 2
     Excel - .xlsx and .xls files
     SQL - Database connections
     TSV - Tab-separated values
+
+
+## Configuration
+
+Create a config.yaml file to customize behavior:
+```YAML
+
+hash_algorithm: 'sha256'
+case_sensitive: false
+flag_threshold: 2  # Flag if hash appears 2 or more times
+export_format: 'html'
+```
+## Report Output
+
+The system generates detailed reports including:
+
+- List of duplicate hashes with affected employees
+- Security risk assessment
+- Recommendations for remediation
+- Export options (HTML, PDF, JSON, CSV)
+
+## Security Considerations
+
+- This tool processes sensitive data; store outputs securely
+- Use HTTPS when transferring reports
+- Consider encrypting the database of hashes
+- Regular audits recommended
+
+## License
+
+MIT License - See LICENSE file for details
+Contributing
+
+Contributions welcome! Please submit pull requests or issues.
+Support
+
+For questions or issues, please open a GitHub issue.
